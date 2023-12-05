@@ -79,7 +79,10 @@ function MangaCard({ manga, index }: Prop) {
               className='object-contain'
             />
             {manga.genres.map((genre, index) => (
-              <span className='mx-1 text-base font-bold text-[#FFAD49]'>
+              <span
+                key={index}
+                className='mx-1 text-base font-bold text-[#FFAD49]'
+              >
                 {genre}
               </span>
             ))}

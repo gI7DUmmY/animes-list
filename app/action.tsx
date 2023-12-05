@@ -20,10 +20,13 @@ export const fetchAnime = async (page: number) => {
 }
 
 export const fetchManga = async (page: number) => {
+  const key: any = process.env.NEXT_API_KEY
+  const host: any = process.env.NEXT_API_HOST
+
   let headersList = {
     Accept: '*/*',
-    'X-RapidAPI-Key': '4d5a486e51mshe5c89d5b3fd6351p1b4cecjsn07840a9ecc79',
-    'X-RapidAPI-Host': 'mangaverse-api.p.rapidapi.com',
+    'X-RapidAPI-Key': key,
+    'X-RapidAPI-Host': host,
   }
 
   let response = await fetch(
